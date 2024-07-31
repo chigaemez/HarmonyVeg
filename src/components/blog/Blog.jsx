@@ -3,13 +3,13 @@ import React from 'react'
 
 const Blog = () => {
   return (
-    <div className='bg-gray-100 h-[90vh]'>
+    <div className='lg:h-[100vh] bg-slate-100  py-[4rem] lg:py-0'>
       <div className='flex flex-col justify-center items-center py-9 '>
-        <p className='text-xl font-bold text-green-600 '>Latest News</p>
-        <h1 className='text-5xl my-7 font-semibold text-gray-700'>Our Blog</h1>
+        <p className='lg:text-xl font-bold text-green-600 '>Latest News</p>
+        <h1 className='lg:text-5xl text-3xl my-4 font-semibold text-gray-700'>Our Blog</h1>
 
-        <div className='grid grid-cols-3 w-[80%] '>
-          <div className='card card-compact mx-auto  w-[80%] bg-base-100 shadow-xl'>
+        <div className='grid lg:grid-cols-3 md:grid-cols-2 gap-10 grid-cols-1 w-[80%] '>
+          <div className='card card-compact mx-auto  w-[90%] bg-base-100 shadow-xl'>
             <figure>
               <img
                 src='https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg'
@@ -29,7 +29,7 @@ const Blog = () => {
               </p>
             </div>
           </div>
-          <div className='card card-compact mx-auto w-[80%] bg-base-100 shadow-xl'>
+          <div className='card card-compact mx-auto w-[90%] bg-base-100 shadow-xl'>
             <figure>
               <img
                 src='https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg'
@@ -49,7 +49,7 @@ const Blog = () => {
               </p>
             </div>
           </div>
-          <div className='card card-compact mx-auto w-[80%] bg-base-100 shadow-xl'>
+          <div className='card card-compact mx-auto w-[90%] bg-base-100 shadow-xl'>
             <figure>
               <img
                 src='https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg'
