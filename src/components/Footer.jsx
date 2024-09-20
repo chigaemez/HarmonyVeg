@@ -12,7 +12,7 @@ import { MdMail } from 'react-icons/md'
 const Footer = () => {
   return (
     <>
-      <div className=' from-[#171e44] to-[#4e4674] bg-gradient-to-br flex flex-col lg:flex-row py-9  justify-center items-center'>
+      <div className='  bg-gradient-to-br flex flex-col lg:flex-row py-9  justify-center items-center'>
         <div className='flex flex-col lg:w-[30%] w-[80%] '>
           <h1 className='text-lg text-white font-medium my-[30px]'>
             QUICK LINKS
@@ -80,7 +80,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <footer className='border-t-2 w-full h-[10vh] from-[#171e44] to-[#4e4674] bg-gradient-to-br flex lg:flex-row flex-col md:flex-row  justify-center items-center'>
+      <footer className='border-t-2 w-full h-[10vh]  bg-gradient-to-br flex lg:flex-row flex-col md:flex-row  justify-center items-center'>
         <h1 className='text-slate-200 '>
           <span className='text-sm'>&copy; 2024 | Harmony Veg Home reserved. </span>
         </h1>

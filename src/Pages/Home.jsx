@@ -7,13 +7,13 @@ import Team from '../components/Our_Team/Team'
 
 const Home = () => {
   return (
-    <div>
+    <>
       <Hero />
       <About />
       <Farm />
       <Product />
       <Team />
-    </div>
+    </>
   )
 }
 

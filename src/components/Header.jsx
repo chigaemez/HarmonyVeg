@@ -2,48 +2,199 @@ import React, { useContext, useState, useEffect } from 'react'
 import { BsCart4 } from 'react-icons/bs'
 import CartContext from '../Context/CartContext'
 import { Link } from 'react-router-dom'
+import { IoClose } from 'react-icons/io5'
+import { RiMenu2Line } from 'react-icons/ri'
 
 const Header = ({ isOpen }) => {
+  const GlobalState = useContext(CartContext)
+  const [showMenu, SetShowMenu] = useState(false)
+  const [navbar, setNavbar] = useState(false)
 
+  const handleToggleMenu = () => {
+    SetShowMenu(!showMenu)
+  }
 
+  const HandleBgChange = () => {
+    if (window.scrollY >= 90) {
+      setNavbar(true)
+    } else {
+      setNavbar(false)
+    }
+  }
 
-    const GlobalState = useContext(CartContext)
+  window.addEventListener('scroll', HandleBgChange)
 
-    const state = GlobalState.state
-    return (
-        <div className="navbar from-[#171e44] to-[#4e4674] bg-gradient-to-br fixed z-[999]">
-            <div className="navbar-start">
-                <div className="dropdown">
-                    <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
-                        <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
-                    </div>
-                    <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
-                        <li ><a>Home</a></li>
-                        <li>
-                            <a>Parent</a>
+  const state = GlobalState.state
+  return (
+    <div
+      className={
+        navbar
+          ? 'flex items-center lg:px-24 px-4 justify-between fixed top-0 duration-300 ease-in left-0 z-40 w-full bg-stone-300 shadow-xl  h-[90px] py-5 '
+          : 'flex items-center lg:px-24 px-4 justify-between fixed top-0 duration-300 ease-in left-0 z-40 w-full h-[90px] py-5 '
+      }
+    >
+      {showMenu && (
+        <div class='absolute z-[999] inset-0 flex lg:hidden h-screen bg-black opacity-70 duration-700 ease-in'></div>
+      )}
+      <div className='flex items-center justify-center'>
+        <h1
+          className={
+            navbar
+              ? 'text-3xl flex font-bold text-stone-800 relative  z-50 cursor-pointer duration-300 ease-in '
+              : 'text-3xl flex font-bold text-white relative z-50 cursor-pointer duration-300 ease-in '
+          }
+        >
+          HVH{' '}
+          <hr
+            className={
+              navbar
+                ? 'w-[40px] h-1 bg-stone-800 border-none absolute top-4 right-3 duration-300 ease-in'
+                : 'w-[40px] h-1 bg-white border-none absolute top-4 right-3 duration-300 ease-in'
+            }
+          />{' '}
+          <span>.</span>
+        </h1>
+      </div>
 
-                        </li>
-                        <li><a>Item 3</a></li>
-                    </ul>
-                </div>
-                <a className="btn btn-ghost text-xl">daisyUI</a>
-            </div>
-            <div className="navbar-center hidden lg:flex">
-                <ul className="menu menu-horizontal px-1">
-                    <li><a className='text-white text-base'>Home</a></li>
-                    <li>
-                        <a className='text-white text-base'>About</a>
-                    </li>
-                    <li><a className='text-white text-base'>Our Product</a></li>
-                    <li><a className='text-white text-base'>Our Team</a></li>
-                </ul>
-            </div>
-            <div className="navbar-end relative ">
-                <Link to="/cart" onClick={() => isOpen(true)} className="btn text-xl"><BsCart4 /></Link>
-                <div className='text-gray-200 absolute top-0 right-[2%] text-base'><span>{state.length}</span></div>
-            </div>
+      {/* DESKTOP VIEW */}
+
+      <div className='hidden md:hidden lg:flex'>
+        <div>
+          <ul className='flex items-center gap-9'>
+            <li
+              className={
+                navbar
+                  ? 'text-lg cursor-pointer text-black hover:text-gray-600 font-medium duration-300 ease-in'
+                  : 'text-lg cursor-pointer text-gray-300 hover:text-white font-medium duration-300 ease-in'
+              }
+            >
+              <Link to='/'>Home</Link>
+            </li>
+            <li
+              className={
+                navbar
+                  ? 'text-lg cursor-pointer text-black hover:text-gray-600 font-medium duration-300 ease-in'
+                  : 'text-lg cursor-pointer text-gray-300 hover:text-white font-medium duration-300 ease-in'
+              }
+            >
+              About
+            </li>
+            <li
+              className={
+                navbar
+                  ? 'text-lg cursor-pointer text-black hover:text-gray-600 font-medium duration-300 ease-in'
+                  : 'text-lg cursor-pointer text-gray-300 hover:text-white font-medium duration-300 ease-in'
+              }
+            >
+              Services
+            </li>
+
+            <li
+              className={
+                navbar
+                  ? 'text-lg cursor-pointer text-black hover:text-gray-600 font-medium duration-300 ease-in'
+                  : 'text-lg cursor-pointer text-gray-300 hover:text-white font-medium duration-300 ease-in'
+              }
+            >
+              Pricing
+            </li>
+            <li
+              className={
+                navbar
+                  ? 'text-lg cursor-pointer text-black hover:text-gray-600 font-medium duration-300 ease-in'
+                  : 'text-lg cursor-pointer text-gray-300 hover:text-white font-medium duration-300 ease-in'
+              }
+            >
+              Team
+            </li>
+
+            <li
+              className={
+                navbar
+                  ? 'text-lg cursor-pointer text-black hover:text-gray-600 font-medium duration-300 ease-in'
+                  : 'text-lg cursor-pointer text-gray-300 hover:text-white font-medium duration-300 ease-in'
+              }
+            >
+              Contact
+            </li>
+            <Link
+              to='/cart'
+              className={
+                navbar
+                  ? 'relative bg-stone-700 py-2 px-7 rounded duration-300 ease-in'
+                  : 'relative bg-stone-300 py-2 px-7 rounded duration-300 ease-in'
+              }
+            >
+              <BsCart4
+                className={
+                  navbar
+                    ? 'text-stone-300 text-2xl duration-300 ease-in'
+                    : 'text-stone-800 text-2xl duration-300 ease-in'
+                }
+              />
+
+              <p className='text-sm text-red-600 absolute top-[-2px] right-9 font-bold'>
+                0
+              </p>
+            </Link>
+          </ul>
         </div>
-    )
+      </div>
+      <div className='flex lg:hidden items-center justify-between gap-4'>
+        <div
+          className={
+            navbar
+              ? 'flex text-black gap-6 lg:hidden text-2xl z-50 duration-300 ease-in '
+              : 'flex text-white gap-6 lg:hidden text-2xl z-50 duration-300 ease-in'
+          }
+          onClick={handleToggleMenu}
+        >
+          <RiMenu2Line />
+        </div>
+        <div className='relative'>
+          <BsCart4 className='text-stone-300 text-2xl' />
+          <p className='text-lg text-red-400 absolute top-[-16px] right-1 font-bold'>
+            0
+          </p>
+        </div>
+      </div>
+
+      {/* MOBILE VIEW  */}
+
+      {showMenu && (
+        <div className='flex lg:hidden  justify-between duration-500 h-[90vh] ease-out z-[999] rounded-lg px-4  bg-white w-[95%] absolute top-[50px] py-4 bg-transparent  text-white'>
+          <IoClose
+            className=' z-[999] absolute  text-white top-[-40px] right-0 text-3xl '
+            onClick={handleToggleMenu}
+          />
+          <div>
+            <ul className='flex flex-col  items-start gap-9 '>
+              <li className='text-lg cursor-pointer text-gray-700 hover:text-white font-medium'>
+                Home
+              </li>
+              <li className='text-lg cursor-pointer text-gray-700 hover:text-white font-medium'>
+                About
+              </li>
+              <li className='text-lg cursor-pointer text-gray-700 hover:text-white font-medium'>
+                Services
+              </li>
+
+              <li className='text-lg cursor-pointer text-gray-700 hover:text-white font-medium'>
+                Pricing
+              </li>
+              <li className='text-lg cursor-pointer text-gray-700 hover:text-white font-medium'>
+                Team
+              </li>
+
+              <li className='text-lg cursor-pointer text-gray-700 hover:text-white font-medium'>
+                Contact
+              </li>
+            </ul>
+          </div>
+        </div>
+      )}
+    </div>
+  )
 }
 
 export default Header

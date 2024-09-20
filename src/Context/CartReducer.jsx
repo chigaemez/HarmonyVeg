@@ -35,7 +35,7 @@ const CartReducer = (state, action) => {
         case 'INCREASE':
             const tempState2 = state.map((item) => {
                 if (item.id == action.payload.id) {
-                    return { ...item, quantity: item.quantity + 1 }
+                    return { ...item, quantity: item.quantity  }
                 } else {
                     return item
                 }

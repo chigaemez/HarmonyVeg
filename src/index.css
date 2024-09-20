@@ -40,16 +40,3 @@
       margin: 0;
     }
   }
-@layer utilities{
-    .slide{
-        @apply  absolute top-0 flex justify-center items-center left-1 gap-6  w-[100%] h-[100%] opacity-0 translate-x-[-90%]  shadow-black duration-500 transition-all ease-in  from-[#171e44] to-[#4e4674] rounded-3xl
-    }
-    .current{
-        @apply opacity-[1] translate-x-[0%]
-    }
-    
- 
- 
-   
-  
-}

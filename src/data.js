@@ -30,8 +30,8 @@ export const teamData = [
     },
     {
         image: person3,
-        Name: "Orji Chigaemezu Christopher",
-        Role: " Christopher is the manager in charger of Harmony Vagetable Homes"
+        Name: "Orji Christopher",
+        Role: " Orji is the manager in charger of Harmony Vagetable Homes"
     },
     {
         image: person2,
@@ -40,14 +40,14 @@ export const teamData = [
     },
     {
         image: person4,
-        Name: "Orji Chigaemezu Christopher",
-        Role: " Christopher is the Head of IT in charger of Harmony Vagetable Homes"
+        Name: "Orji Christopher",
+        Role: " Orji is the Head of IT in charger of Harmony Vagetable Homes"
     }
 ]
 
 export const shoppingData = [
     {
-        id: "slide1",
+        id: 1,
         image: hero,
         price: 800,
         quantity: 1,
@@ -56,19 +56,19 @@ export const shoppingData = [
         
     },
     {
-        id: "slide2",
+        id: 2,
         image: hero3,
         price: 1200,
-        quantity: 1,
+        quantity: 2,
         name: " Neatly Weashed Bitter Leaf",
         dec: "The greatest service which can be rendered to any country is to add a useful plant to its culture"
         
     },
     {
-        id: "slide3",
+        id: 3,
         image: hero2,
         price: 900,
-        quantity: 1,
+        quantity: 2,
         name: " Freshly Diced Shoko Leaf(Lagos Spinach)",
         dec: "The greatest service which can be rendered to any country is to add a useful plant to its culture"
         

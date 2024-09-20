@@ -3,7 +3,7 @@ import { background } from '../../assets/Images'
 
 const Product = () => {
   return (
-    <div className='lg:h-screen  py-[4rem] lg:py-0  bg-cover -z-10 space-y-4 bg-center bg-white  bg-no-repeat  flex flex-col justify-center'
+    <div className='lg:h-screen  py-[4rem] lg:py-0  bg-cover -z-10 space-y-4 bg-center   bg-no-repeat  flex flex-col justify-center'
     style={{ backgroundImage: `url(${background})` }}>
       <div className='flex flex-col justify-center items-center py-9 '>
         <p className='lg:text-xl font-bold text-green-600 '>What we offer</p>
@@ -12,7 +12,7 @@ const Product = () => {
         </h1>
 
         <div className='grid lg:grid-cols-3 md:grid-cols-2 gap-10 grid-cols-1 w-[80%] '>
-          <div className='card w-[90%] mx-auto h-[40vh] bg-gradient-to-br text-white from-[#171e44] to-[#4e4674] '>
+          <div className='card w-[90%] mx-auto h-[40vh]  text-white bg-gradient-to-r  from-stone-400 to-stone-600 '>
             <div className='card-body'>
               <h2 className='card-title'>Card title!</h2>
               <p>If a dog chews shoes whose shoes does he choose?</p>
@@ -21,7 +21,7 @@ const Product = () => {
               </div>
             </div>
           </div>
-          <div className='card w-[90%] mx-auto h-[40vh] bg-gradient-to-br text-white from-[#171e44] to-[#4e4674] '>
+          <div className='card w-[90%] mx-auto h-[40vh]  text-white bg-gradient-to-r  from-stone-400 to-stone-600 '>
             <div className='card-body'>
               <h2 className='card-title'>Card title!</h2>
               <p>If a dog chews shoes whose shoes does he choose?</p>
@@ -30,7 +30,7 @@ const Product = () => {
               </div>
             </div>
           </div>
-          <div className='card w-[90%] mx-auto h-[40vh] bg-gradient-to-br text-white from-[#171e44] to-[#4e4674] '>
+          <div className='card w-[90%] mx-auto h-[40vh]  text-white bg-gradient-to-r  from-stone-400 to-stone-600 '>
             <div className='card-body'>
               <h2 className='card-title'>Card title!</h2>
               <p>If a dog chews shoes whose shoes does he choose?</p>
