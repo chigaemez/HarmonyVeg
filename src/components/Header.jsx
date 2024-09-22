@@ -34,7 +34,7 @@ const Header = ({ isOpen }) => {
       }
     >
       {showMenu && (
-        <div class='absolute z-[999] inset-0 flex lg:hidden h-screen bg-black opacity-70 duration-700 ease-in'></div>
+        <div className='absolute z-[999] inset-0 flex lg:hidden h-screen bg-black opacity-70 duration-700 ease-in'></div>
       )}
       <div className='flex items-center justify-center'>
         <h1
@@ -121,8 +121,8 @@ const Header = ({ isOpen }) => {
               to='/cart'
               className={
                 navbar
-                  ? 'relative bg-stone-700 py-2 px-7 rounded duration-300 ease-in'
-                  : 'relative bg-stone-300 py-2 px-7 rounded duration-300 ease-in'
+                  ? 'relative bg-stone-700 py-2 px-7  rounded duration-300 ease-in'
+                  : 'relative bg-stone-300 py-2 px-7  rounded duration-300 ease-in'
               }
             >
               <BsCart4
@@ -133,8 +133,8 @@ const Header = ({ isOpen }) => {
                 }
               />
 
-              <p className='text-sm text-red-600 absolute top-[-2px] right-9 font-bold'>
-                0
+              <p className='text-lg text-red-600 absolute top-[-4px] right-9 font-extrabold'>
+               {state.length}
               </p>
             </Link>
           </ul>
@@ -151,12 +151,18 @@ const Header = ({ isOpen }) => {
         >
           <RiMenu2Line />
         </div>
-        <div className='relative'>
-          <BsCart4 className='text-stone-300 text-2xl' />
+        <Link to='/cart' className='relative z-40'>
+          <BsCart4
+            className={
+              navbar
+                ? 'text-stone-800 text-2xl duration-300 ease-in'
+                : 'text-stone-300 text-2xl duration-300 ease-in'
+            }
+          />
           <p className='text-lg text-red-400 absolute top-[-16px] right-1 font-bold'>
             0
           </p>
-        </div>
+        </Link>
       </div>
 
       {/* MOBILE VIEW  */}

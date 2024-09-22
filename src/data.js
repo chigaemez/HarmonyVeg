@@ -1,4 +1,4 @@
-import { hero, hero2, hero3, sample, person1, person2, person3, person4 } from "./assets/Images";
+import { hero, hero2, hero3, sample, person1, person2, person3, person4, HeroBg } from "./assets/Images";
 
 export const image = [
     
@@ -10,6 +10,34 @@ export const image = [
       
  
 ]
+
+export const HeroData = [
+    {
+        id: 1,
+        image: hero,
+        
+    },
+    {
+        id: 2,
+        image: hero2,
+
+    },
+    {
+        id: 3,
+        image: hero3,
+
+    },
+    {
+        id: 4,
+        image: HeroBg,
+
+    },
+    {
+        id: 5,
+        image: sample,
+
+    }
+] 
 
 
 
@@ -38,11 +66,7 @@ export const teamData = [
         Name: "Eze Favour Nnenna",
         Role: "Favour is Our Leading Customer Care Specalist"
     },
-    {
-        image: person4,
-        Name: "Orji Christopher",
-        Role: " Orji is the Head of IT in charger of Harmony Vagetable Homes"
-    }
+  
 ]
 
 export const shoppingData = [
@@ -69,7 +93,7 @@ export const shoppingData = [
         image: hero2,
         price: 900,
         quantity: 2,
-        name: " Freshly Diced Shoko Leaf(Lagos Spinach)",
+        name: " Diced Shoko Leaf(Lagos Spinach)",
         dec: "The greatest service which can be rendered to any country is to add a useful plant to its culture"
         
     }

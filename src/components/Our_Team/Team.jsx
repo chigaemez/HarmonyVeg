@@ -17,31 +17,31 @@ const Team = () => {
           Our Team
         </h1>
 
-        <div className='grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-9 lg:gap-0  w-[90%] '>
+        <div className='flex flex-wrap lg:flex-row  w-[80%] '>
           {
             teamData.map((team, index) => {
               return (
-                <div className='card w-[90%] mx-auto  bg-base-50 shadow-xl' key={index}>
+                <div className='card  mx-auto p-1 bg-base-50 shadow-xl' key={index}>
                   <figure className=' '>
                     <img
                       src={team.image}
                       alt='Shoes'
-                      className='rounded-t-lg h-[40vh] object-cover w-[100%]'
+                      className='rounded-t-lg h-[300px] object-cover w-[300px]'
                     />
                   </figure>
-                  <div class=" inset-0 -z-10 h-[40%] rounded-b-lg shadow-md w-full items-center px-5 py-5 [background:radial-gradient(125%_125%_at_50%_10%,#000_40%,#63e_100%)]">
+                  <div className=" w-[300px] bg-gradient-to-r from-stone-700 to-stone-400 rounded-b-lg p-4">
                     
-                    <h2 className='card-title pb-4 text-stone-300 font-medium'>
+                    <h2 className='card-title pb-1 text-stone-300 font-medium'>
                       {team.Name}
                     </h2>
-                    <p className='text-stone-400 py-2' >
+                    <p className='text-stone-400 py-1' >
                       {team.Role}
                     </p>
-                    <div className='card-actions py-4 gap-[40px] text-gray-50'>
-                      <FaFacebook className='hover:text-green-500 cursor-pointer duration-300' />
-                      <FaInstagram className='hover:text-green-500 cursor-pointer duration-300' />
-                      <FaTwitter className='hover:text-green-500 cursor-pointer duration-300' />
-                      <FaGooglePlus className='hover:text-green-500 cursor-pointer duration-300' />
+                    <div className='card-actions items-center justify-center py-4 gap-[40px] text-gray-50'>
+                      <FaFacebook className='hover:text-green-500 text-2xl cursor-pointer duration-300' />
+                      <FaInstagram className='hover:text-green-500 text-2xl cursor-pointer duration-300' />
+                      <FaTwitter className='hover:text-green-500 text-2xl cursor-pointer duration-300' />
+                      <FaGooglePlus className='hover:text-green-500 text-2xl cursor-pointer duration-300' />
                     </div>
                   </div>
                 </div>
